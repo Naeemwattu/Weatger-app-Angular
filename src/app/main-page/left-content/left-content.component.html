@@ -1,15 +1,24 @@
-<mat-form-field class="example-full-width" appearance="fill">
-  <mat-label>Search City</mat-label>
-  <input matInput placeholder="Ex. Sambrial" [formControl]="search">
-</mat-form-field>
+<div class="input">
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Search City</mat-label>
+    <input matInput placeholder="Ex. Sambrial" [formControl]="search">
+  </mat-form-field>
 
-<div class="example-button-container">
+  <div class="example-button-container">
+    <button mat-raised-button color="primary" [disabled]="!search.value" (click)="addWeather()">
+      <mat-icon>search</mat-icon>
+    </button>
 
-  <button mat-raised-button color="primary" [disabled]="!search.value" (click)="addWeather()">
-    <mat-icon>search</mat-icon>
-  </button>
+    <button mat-flat-button color="primary" style="margin-top: 5px;">Live</button>
+
+  </div>
 </div>
 
-<ul *ngFor="let item of list">
+<!-- <ul *ngFor="let item of list">
   <li>{{item.name}}</li>
-</ul>
+</ul> -->
+
+<div class="example-button-container" *ngFor="let item of list">
+  <button mat-flat-button color="primary" style="width: 65%; margin-left: 20px; ">{{item.name}}</button>
+</div>
+
