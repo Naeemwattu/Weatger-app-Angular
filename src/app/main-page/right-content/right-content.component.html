@@ -1,5 +1,5 @@
 <h1>Weather</h1>
-<div class="weather">
+<div class="weather" *ngIf="weatherData">
   <mat-card>
     <div class="weather-data">
       <div class="location">{{ weatherData.name }}</div>

@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {FormControl} from '@angular/forms';
 import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag-drop';
 
@@ -9,6 +9,7 @@ import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag
 })
 export class LeftContentComponent implements OnInit
 {
+
   search = new FormControl('');
   list: any[] = [];
 
@@ -26,4 +27,7 @@ export class LeftContentComponent implements OnInit
     this.search.setValue('');
   }
 
+  onSubmit(){
+
+  }
 }
